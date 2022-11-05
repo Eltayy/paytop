@@ -26,6 +26,7 @@ export const List: FunctionComponent<Props> = ({ clients }) => (
           <th>createdAt</th>
           <th>updatedAt</th>
           <th />
+          <th />
         </tr>
       </thead>
       <tbody>
