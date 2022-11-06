@@ -10,7 +10,6 @@ export class Client implements Item {
     public email?: string,
     public phoneNumber?: string,
     public createdAt?: Date,
-    public updatedAt?: Date
   ) {
     this["@id"] = _id;
   }

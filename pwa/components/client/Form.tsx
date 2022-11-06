@@ -216,56 +216,6 @@ export const Form: FunctionComponent<Props> = ({ client }) => {
                 name="phoneNumber"
               />
             </div>
-            <div className="form-group">
-              <label className="form-control-label" htmlFor="client_createdAt">
-                createdAt
-              </label>
-              <input
-                name="createdAt"
-                id="client_createdAt"
-                value={values.createdAt?.toLocaleString() ?? ""}
-                type="dateTime"
-                placeholder=""
-                className={`form-control${
-                  errors.createdAt && touched.createdAt ? " is-invalid" : ""
-                }`}
-                aria-invalid={
-                  errors.createdAt && touched.createdAt ? "true" : undefined
-                }
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-              <ErrorMessage
-                className="invalid-feedback"
-                component="div"
-                name="createdAt"
-              />
-            </div>
-            <div className="form-group">
-              <label className="form-control-label" htmlFor="client_updatedAt">
-                updatedAt
-              </label>
-              <input
-                name="updatedAt"
-                id="client_updatedAt"
-                value={values.updatedAt?.toLocaleString() ?? ""}
-                type="dateTime"
-                placeholder=""
-                className={`form-control${
-                  errors.updatedAt && touched.updatedAt ? " is-invalid" : ""
-                }`}
-                aria-invalid={
-                  errors.updatedAt && touched.updatedAt ? "true" : undefined
-                }
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-              <ErrorMessage
-                className="invalid-feedback"
-                component="div"
-                name="updatedAt"
-              />
-            </div>
             {status && status.msg && (
               <div
                 className={`alert ${

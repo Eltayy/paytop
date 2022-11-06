@@ -24,7 +24,6 @@ export const List: FunctionComponent<Props> = ({ clients }) => (
           <th>email</th>
           <th>phoneNumber</th>
           <th>createdAt</th>
-          <th>updatedAt</th>
           <th />
           <th />
         </tr>
@@ -49,7 +48,6 @@ export const List: FunctionComponent<Props> = ({ clients }) => (
                   <td>{client["email"]}</td>
                   <td>{client["phoneNumber"]}</td>
                   <td>{client["createdAt"]?.toLocaleString()}</td>
-                  <td>{client["updatedAt"]?.toLocaleString()}</td>
                   <td>
                     <Link href={getPath(client["@id"], "/clients/[id]")}>
                       <a>

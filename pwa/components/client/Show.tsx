@@ -66,10 +66,6 @@ export const Show: FunctionComponent<Props> = ({ client, text }) => {
             <th scope="row">createdAt</th>
             <td>{client["createdAt"]?.toLocaleString()}</td>
           </tr>
-          <tr>
-            <th scope="row">updatedAt</th>
-            <td>{client["updatedAt"]?.toLocaleString()}</td>
-          </tr>
         </tbody>
       </table>
       {error && (
