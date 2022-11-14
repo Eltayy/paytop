@@ -27,8 +27,8 @@
 ```
 
 ```sh
-  cd /pwa
-  npm install
+  cd /api 
+  php bin/console --env=dev doctrine:fixtures:load
 ```
 
 ## Infos
@@ -45,5 +45,13 @@
 | HTTPS | 443 |
 | Database (POSTGRES) | 5432 |
 
-### Lien WebHook
+## Lien WebHook
 > https://webhook.site/f79663c7-cac2-4095-8d8b-1b72a0fdb041
+
+## Users 
+
+| Role | Login | Password |
+| ------ | ------ | ------ |
+| Admin | admin@test.com  | 0000 |
+| User | partner1@test.com  | 0000 |
+| User | partner2@test.com  | 0000 |
