@@ -110,9 +110,10 @@ class Client
     }
 
     public function setUser(?User $user): self
-    {
-        $this->user = $user->id;
+    {   
 
+        $this->user = $user;
+            
         return $this;
     }
 }
