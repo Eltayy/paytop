@@ -5,10 +5,15 @@ namespace App\Entity;
 use ApiPlatform\Metadata\ApiResource;
 use App\Repository\ClientRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ApiResource]
 #[ORM\Entity(repositoryClass: ClientRepository::class)]
 #[ORM\HasLifecycleCallbacks]
+#[ApiResource(
+    normalizationContext: ['groups' => ['user']],
+    denormalizationContext: ['groups' => ['user']]
+)]
 class Client
 {
     #[ORM\Id]
@@ -17,15 +22,19 @@ class Client
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups("user")]
     private ?string $lastName = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups("user")]
     private ?string $firstName = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups("user")]
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups("user")]
     private ?string $phoneNumber = null;
 
     #[ORM\Column]
